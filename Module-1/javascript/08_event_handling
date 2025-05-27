@@ -1,0 +1,14 @@
+<input id="search" />
+<select id="category"><option value="music">Music</option></select>
+<button onclick="register()">Register</button>
+<script>
+document.getElementById("category").onchange = function(e) {
+  console.log("Filtered by", e.target.value);
+};
+document.getElementById("search").onkeydown = function(e) {
+  console.log("Searching for", e.key);
+};
+function register() {
+  alert("Registered!");
+}
+</script>

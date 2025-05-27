@@ -1,0 +1,7 @@
+<script>
+const greet = (name = "User") => `Hello, ${name}`;
+const event = { name: "Conference", date: "2025-09-01" };
+const { name, date } = event;
+const events = [event];
+const cloned = [...events];
+</script>

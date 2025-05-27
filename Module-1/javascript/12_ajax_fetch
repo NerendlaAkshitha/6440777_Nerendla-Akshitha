@@ -1,0 +1,20 @@
+<form id="submitForm">
+  <input name="name" />
+  <button type="submit">Submit</button>
+</form>
+<script>
+document.getElementById("submitForm").onsubmit = async function(e) {
+  e.preventDefault();
+  const name = e.target.name.value;
+  try {
+    const res = await fetch("https://mockapi.io/register", {
+      method: "POST",
+      body: JSON.stringify({ name }),
+      headers: { "Content-Type": "application/json" }
+    });
+    setTimeout(() => alert("Submitted!"), 1000);
+  } catch (err) {
+    alert("Submission failed.");
+  }
+};
+</script>

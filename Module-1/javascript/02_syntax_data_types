@@ -1,0 +1,9 @@
+<script>
+const eventName = "Music Festival";
+const eventDate = "2025-07-10";
+let seats = 100;
+
+console.log(`Event: ${eventName} on ${eventDate}. Seats available: ${seats}`);
+seats--;
+console.log(`Seats after registration: ${seats}`);
+</script>

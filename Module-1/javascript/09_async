@@ -1,0 +1,20 @@
+<div id="events"></div>
+<script>
+const container = document.getElementById("events");
+
+function showEvents(data) {
+  container.innerHTML = data.map(e => `<p>${e.name}</p>`).join("");
+}
+
+fetch("https://mockapi.io/events")
+  .then(res => res.json())
+  .then(showEvents)
+  .catch(err => console.error(err));
+
+async function fetchEvents() {
+  container.innerHTML = "Loading...";
+  const res = await fetch("https://mockapi.io/events");
+  const data = await res.json();
+  showEvents(data);
+}
+</script>

@@ -1,0 +1,10 @@
+<script>
+console.log("Submitting form...");
+const data = { name: "John" };
+console.log("Payload:", data);
+fetch("https://mockapi.io/submit", {
+  method: "POST",
+  body: JSON.stringify(data),
+  headers: { "Content-Type": "application/json" }
+});
+</script>

@@ -1,0 +1,21 @@
+<script>
+const events = [
+  { name: "Past Event", date: "2024-01-01", seats: 0 },
+  { name: "Music Night", date: "2025-08-01", seats: 5 },
+];
+
+events.forEach(event => {
+  if (new Date(event.date) > new Date() && event.seats > 0) {
+    console.log(`${event.name} is available.`);
+  }
+});
+
+function register(event) {
+  try {
+    if (event.seats <= 0) throw "No seats left";
+    event.seats--;
+  } catch (e) {
+    console.error("Registration error:", e);
+  }
+}
+</script>

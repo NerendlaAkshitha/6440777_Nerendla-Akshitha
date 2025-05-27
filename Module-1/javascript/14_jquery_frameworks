@@ -1,0 +1,9 @@
+<div id="card" style="display:none;">Event Info</div>
+<button id="registerBtn">Register</button>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$('#registerBtn').click(() => {
+  $('#card').fadeIn();
+});
+</script>
+<!-- Benefit: React or Vue allows modular and reactive UI building. -->
